@@ -7,7 +7,7 @@ export async function generateThumbnail(file) {
   const canvas = document.createElement("canvas");
   canvas.width = THUMBNAIL_SIZE;
   canvas.height = THUMBNAIL_SIZE;
-  var ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
 
   /** @type HTMLImageElement */
   if (file.type.startsWith("image/")) {

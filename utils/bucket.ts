@@ -8,7 +8,7 @@ export function parseBucketPath(context): [any, string] {
 
   const pathSegments = (params.path || []) as String[];
   const path = decodeURIComponent(pathSegments.join("/"));
-  const driveid = url.hostname.replace(/\..*/, "");
+  const driveID = url.hostname.replace(/\..*/, "");
 
-  return [env[driveid] || env["BUCKET"], path];
+  return [env[driveID] || env["BUCKET"], path];
 }

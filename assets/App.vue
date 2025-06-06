@@ -343,7 +343,7 @@ export default {
     async pasteFile() {
       if (!this.clipboard) return;
       let newName = window.prompt("Rename to:");
-      if (newName === null) return;
+      if (!newName) return;
       if (newName === "") newName = this.clipboard.split("/").pop();
       await this.copyPaste(this.clipboard, `${this.cwd}${newName}`);
       this.fetchFiles();
@@ -418,7 +418,7 @@ export default {
 
     async renameFile(key) {
       const newName = window.prompt("重命名为:");
-      if (!newName) return;
+      if (!newName || newName === key) return;
       await this.copyPaste(key, `${this.cwd}${newName}`);
       await axios.delete(`/api/write/items/${key}`);
       this.fetchFiles();
@@ -595,9 +595,10 @@ export default {
             : url.searchParams.delete("p");
           window.history.pushState(null, "", url.toString());
         }
-        document.title = this.cwd.replace(/.*\/(?!$)|\//g, "") === "/" 
-            ? "FlareDrive-R2 - 优雅的 Cloudflare R2 网盘文件库"
-            :`${this.cwd.replace(/.*\/(?!$)|\//g, "") || "/" } - 优雅的 Cloudflare R2 网盘文件库`;
+        let displayPath = this.cwd.replace(/.*\/(?!$)|\//g, "") || "/"
+        document.title = displayPath === "/"
+            ? "香草的网盘"
+            :`${this.cwd.replace(/.*\/(?!$)|\//g, "")} - 香草的网盘`;
       },
       immediate: true,
     },

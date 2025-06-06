@@ -1,20 +1,20 @@
 {
   "name": "flaredrive-r2",
   "version": "0.0.2",
-  "description": "😁基于cloudflare-r2实现的网盘，可以实现文件分享功能",
+  "description": "基于cloudflare-r2实现的网盘",
   "scripts": {
     "dev": "wrangler pages dev . --r2 BUCKET"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willow-god/FlareDrive-R2.git"
+    "url": "git+https://github.com/KirisameVanilla/FlareDrive-R2.git"
   },
-  "author": "longern",
+  "author": "KirisameVanilla",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/willow-god/FlareDrive-R2/issues"
+    "url": "https://github.com/KirisameVanilla/FlareDrive-R2/issues"
   },
-  "homepage": "https://github.com/willow-god/FlareDrive-R2#readme",
+  "homepage": "https://github.com/KirisameVanilla/FlareDrive-R2#readme",
   "devDependencies": {
     "@cloudflare/workers-types": "^3.3.1",
     "wrangler": "^2.6.2"
