@@ -13,8 +13,7 @@ async function hmacSHA256(secret: ArrayBuffer, message: string | ArrayBuffer) {
     false,
     ["sign"]
   );
-  const signature = await crypto.subtle.sign("HMAC", key, message);
-  return signature;
+  return await crypto.subtle.sign("HMAC", key, message);
 }
 
 export class S3Client {

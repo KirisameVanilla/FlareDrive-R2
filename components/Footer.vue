@@ -15,19 +15,6 @@
       </a>
     </div>
 
-    <div class="stats">
-      访问次数：<span id="vercount_value_site_pv">😯</span>次 | 访客人数：<span id="vercount_value_site_uv">😯</span>人
-    </div>
-
-    <div class="project-links">
-      <strong>项目:</strong><a href="https://github.com/willow-god/FlareDrive-R2" target="_blank"
-        rel="noopener noreferrer">FlareDrive-R2</a>
-      <strong>作者:</strong><a href="https://github.com/willow-god" target="_blank"
-        rel="noopener noreferrer">LiuShen</a>
-      <strong>初始项目:</strong><a href="https://github.com/ljxi/Cloudflare-R2-oss" target="_blank"
-        rel="noopener noreferrer">Cloudflare-R2-OSS</a>
-    </div>
-
     <div class="powered">Powered by <a href="https://workers.cloudflare.com/" target="_blank"
         rel="noopener noreferrer">Cloudflare Workers</a></div>
 
@@ -40,10 +27,10 @@ export default {
   name: "Footer",
   data() {
     return {
-      homeUrl: "https://www.liushen.fun/",
+      homeUrl: "https://vanillaaaa.org",
       blogUrl: "https://blog.liushen.fun/",
-      githubUrl: "https://github.com/willow-god",
-      emailUrl: "mailto:01@liushen.fun"
+      githubUrl: "https://github.com/KirisameVanilla",
+      emailUrl: "vanillaaaajp@gmail.com"
     };
   }
 };
@@ -58,7 +45,6 @@ export default {
   background-color: #ffffff77;
   font-size: 16px;
   border-radius: 50% 50% 0 0;
-
 }
 
 .icons {
@@ -78,21 +64,6 @@ export default {
 
 .icon-link:hover {
   fill: #444;
-}
-
-.stats {
-  margin: 10px 0;
-  color: #444;
-}
-
-.project-links {
-  font-size: 14px;
-  color: #444;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  text-align: center;
 }
 
 .project-links a {
